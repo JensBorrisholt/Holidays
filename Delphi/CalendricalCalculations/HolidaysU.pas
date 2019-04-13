@@ -83,6 +83,8 @@ begin
       Sunday := IncDay(Sunday, DaysPerWeek);
     end;
   end;
+
+  FHolyDayList.Sort;
 end;
 
 class function THolidays<T>.Construct(aYear: Integer; aIncludeSundays, aIncludeHolidays: Boolean): IHolidays;
@@ -99,7 +101,6 @@ begin
     Result := 0
   else
     Result := E_NOINTERFACE;
-
 end;
 
 function TInterfaceTEnumerable<T>._AddRef: Integer;

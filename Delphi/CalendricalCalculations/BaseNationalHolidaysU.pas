@@ -100,6 +100,7 @@ type
     function GetWeekDay(aNumber: TNumber; aDay: TDay; aMonth: TMonth; aYear: Word): TDay; overload;
 
     function GetDate(aYear: Integer; aMonth: TMonth; aDay: Integer): TDateTime;
+    procedure Sort;
   end;
 
 implementation
@@ -270,6 +271,15 @@ begin
     Result := IncDay(Result);
 
   Result := IncDay(Result, (Integer(Number) - 1) * DaysPerWeek);
+end;
+
+procedure TBaseNationalHolidays.Sort;
+begin
+  inherited Sort(TComparer<THoliday>.Construct(
+    function(const L, R: THoliday): Integer
+    begin
+      Result := CompareDate(L.Date, R.Date);
+    end));
 end;
 
 { TDateTimeHelper }

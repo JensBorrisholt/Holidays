@@ -30,7 +30,7 @@ var
   Element: THoliDay;
 begin
   try
-    randomize;
+    Randomize;
     TestYear := RandomRange(1950, 2099);
     Holidays := THolidays<Dainsh>.Construct(TestYear, false, true);
 
