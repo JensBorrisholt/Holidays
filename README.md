@@ -1,3 +1,4 @@
+
 # Holidays
 
 **Canculation of National Holidays**
@@ -14,11 +15,12 @@ Say you want a list of Danish holidays for 2019 you simply write the following:
 
 `Holidays := THolidays<Dainsh>.Construct(2019, false, true);`
 
-First parameter is the yesr, second where to include sundays or not, third parameter is where to include holidays or not. 
+First parameter is the year, second where to include Sundays or not, third parameter is where to include holidays or not. 
 
 ![Danish Holidays 2019](https://github.com/JensBorrisholt/Holidays/blob/master/DanishHolidays2019.png "Danish Holidays 2019")
 
-##Techniques
+## Techniques
+
 In this solution, different techniques have been Implemented.
 
 - Delphi Console
@@ -26,7 +28,7 @@ In this solution, different techniques have been Implemented.
 - TEnumerable
 - Interfaces
 
-##National holidays:
+## National holidays
 
 This initial includes holidays for the following countries:
 
@@ -55,4 +57,3 @@ This initial includes holidays for the following countries:
 - Norway
 - Sweden
 - Usa
-
